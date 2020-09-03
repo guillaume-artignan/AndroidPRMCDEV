@@ -3,6 +3,9 @@ package com.example.applicationcdev;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import com.google.gson.Gson;
 
@@ -25,6 +28,14 @@ public class AvisActivity extends AppCompatActivity {
     }
 
     public void avisDownloaded(Avis[] avis){
-        
+        ProgressBar bar = findViewById(R.id.avis_progress);
+        ListView liste = findViewById(R.id.avis_liste);
+
+        bar.setVisibility(View.INVISIBLE);
+        liste.setVisibility(View.VISIBLE);
+        AvisAdapter adapter = new AvisAdapter(this,R.layout.item_plat);
+        adapter.addAll(avis);
+        liste.setAdapter(adapter);
+
     }
 }

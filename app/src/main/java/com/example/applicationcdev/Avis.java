@@ -3,8 +3,10 @@ package com.example.applicationcdev;
 public class Avis {
     private String id;
     private String title;
+    private String mail;
     private String description;
     private Double nbStars;
+
 
 
     public String getId() {
@@ -37,5 +39,13 @@ public class Avis {
 
     public void setNbStars(Double nbStars) {
         this.nbStars = nbStars;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
     }
 }
