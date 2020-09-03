@@ -23,5 +23,10 @@ public class MainActivity extends AppCompatActivity  {
         startActivity(i);
     }
 
+    public void gotoAvisActivity(View v){
+        Intent i = new Intent(this,AvisActivity.class);
+        startActivity(i);
+    }
+
 
 }
