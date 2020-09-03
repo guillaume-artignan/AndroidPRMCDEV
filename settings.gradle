@@ -1,0 +1,2 @@
+rootProject.name='ApplicationCDEV'
+include ':app'
