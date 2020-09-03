@@ -19,8 +19,12 @@ public class AvisActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_avis);
 
-        AvisDownloadTask dlTask = new AvisDownloadTask();
+        AvisDownloadTask dlTask = new AvisDownloadTask(this);
         dlTask.execute("https://formation-pro.eu:8080/avis");
 
+    }
+
+    public void avisDownloaded(Avis[] avis){
+        
     }
 }

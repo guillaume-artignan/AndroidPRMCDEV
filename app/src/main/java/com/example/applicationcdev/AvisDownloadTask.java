@@ -13,6 +13,12 @@ import java.net.URL;
 
 public class AvisDownloadTask extends AsyncTask<String,Integer,Avis[]> {
 
+    private final AvisActivity activity;
+
+    public AvisDownloadTask(AvisActivity activity){
+        this.activity = activity;
+    }
+
     @Override
     protected Avis[] doInBackground(String... urls) {
         Gson gson = new Gson();
@@ -32,6 +38,6 @@ public class AvisDownloadTask extends AsyncTask<String,Integer,Avis[]> {
 
     @Override
     protected void onPostExecute(Avis[] avis) {
-        Log.e("AVIS",""+avis.length);
+       this.activity.avisDownloaded(avis);
     }
 }
