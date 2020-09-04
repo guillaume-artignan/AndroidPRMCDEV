@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class LoginActivity extends AppCompatActivity {
 
     @Override
@@ -28,6 +30,8 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(i);
         }else {
             Toast.makeText(this,"Mauvais login et ou mot de passe",Toast.LENGTH_LONG).show();
+            Snackbar.make(v, "Mauvais login et ou mot de passe", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
         }
 
 
